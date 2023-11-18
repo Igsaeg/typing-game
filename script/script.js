@@ -21,11 +21,11 @@ function checkInput() {
         score += 100;
         wordElement.innerHTML = highlighted.toUpperCase();
         feedbackElement.innerHTML = 'Correct!';
-        new Audio('assets/correct.mp3').play();
+        new Audio('../assets/correct.mp3').play();
     } else {
         score = Math.max(0, score - 50);
         feedbackElement.innerHTML = `Wrong, you pressed ${userInput.toUpperCase()}.`;
-        new Audio('assets/wrong.mp3').play();
+        new Audio('../assets/wrong.mp3').play();
     }
     userInput = '';
     scoreElement.innerHTML = `Score: ${Math.floor(score)}`;
