@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="media/icon.png"/>
     <title>Typing Game</title>
-    <link rel="stylesheet" href="scripts/main-game/style.css">
-  </head>
-  <body>
-    <div id="loader"></div>
-
-    <div style="display:none;" id="loaderDiv" class="animation">
-      <h1 class="title1">Letter Game</h1>
-      <h1 class="title2" id="score">Score: 0</h1>
-      <h2 class="sTitle1" id="words"></h2>
-      <p class="text1" id="feedback">Press any button to start!</p>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="script/style.css">
+</head>
+<body>
+    <h1>Letter Game</h1>
+    <p id="score">Score: 0</h1>
+    <h2 id="words"></h2>
+    <p id="feedback">Press any button to start!</p>
       
-      <button class="button1" id="button" onclick="toggleMobileMode()">Mobile mode</button>
-      <input id="mobileInput" type="text" placeholder="Type the text shown here">
-    </div>
+    <button id="button" onclick="mobileMode()">Mobile mode</button>
+    <input id="input" type="text" placeholder="Type the text shown here">
 
-    <script src="scripts/main-game/script.js"></script>
-  </body>
+    <script src="script/data.js"></script>
+    <script src="script/script.js"></script>
+</body>
 </html>
