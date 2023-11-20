@@ -36,10 +36,6 @@ setInterval(() => {
     score = Math.max(0, score - 0.1 * score);
     scoreElement.innerHTML = `Score: ${Math.floor(score)}`;
 }, 1000);
-function mobileMode() {
-    inputElement.style.display = (inputElement.style.display == 'block') ? 'none' : 'block';
-    document.getElementById('button').classList.toggle('active');
-}
 document.addEventListener('keydown', (event) => {
     if (letterRegex.test(event.key) && !userInput && !specialKeys.includes(event.key)) {
         userInput = event.key;
