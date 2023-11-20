@@ -22,8 +22,8 @@ function checkInput() {
         new Audio('assets/correct.mp3').play();
     } else {
         let highlighted = letterArray.map((letter, i) => {
-            if (letter === ' ') { return '_<wbr>'; }
-            else { return `<span style="${i < place ? 'color: green;' : (i == place ? 'color: red;' : '')}">${letter}</span>`; }
+            if (letter === ' ') { return `<span style="color: ${i < place ? 'green;' : (i === place ? 'red;' : 'inherit;')}">_<wbr></span>`; }
+            else { return `<span style="${i < place ? 'color: green;' : (i === place ? 'color: red;' : '')}">${letter}</span>`; }
         }).join('');
         score = Math.max(0, score - 50);
         wordElement.innerHTML = highlighted;
