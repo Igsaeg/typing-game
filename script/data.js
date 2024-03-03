@@ -508,7 +508,7 @@ const sentences = [
     "I practiced calming meditation techniques.",
     "We adorned the city walls with striking street art."
 ];   
-const letterRegex = /^[a-zA-Z0-9\s.]+$/;
+const letterRegex = /^[a-zA-Z0-9\s.,]+$/;
 const specialKeys = [
     'Shift', 'Control', 'Alt', 'Meta',
     'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',

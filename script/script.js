@@ -16,15 +16,12 @@ function initGame() {
 function checkInput() {
     if (userInput == letterArray[place]) {
         place = (place + 1 !== letterArray.length) ? place + 1 : (initGame(), 0);
-        let highlighted = letterArray.map((letter, i) => `<span style="${i < place ? 'color: green;' : ''}">${letter}</span>`).join('');
+        let highlighted = letterArray.map((letter, i) => `<span style="${i < place ? 'color: #F5F5F5;' : (i === place ? 'border-left: 2px solid #fff;' : '')}">${letter}</span>` ).join('');
         score += 100;
         wordElement.innerHTML = highlighted;
         new Audio('assets/correct.mp3').play();
     } else {
-        let highlighted = letterArray.map((letter, i) => {
-            if (letter === ' ') { return `<span style="color: ${i < place ? 'green;' : (i === place ? 'red;' : 'inherit;')}">_<wbr></span>`; }
-            else { return `<span style="${i < place ? 'color: green;' : (i === place ? 'color: red;' : '')}">${letter}</span>`; }
-        }).join('');
+        let highlighted = letterArray.map((letter, i) => { return `<span style="${i < place ? 'color: #F5F5F5;' : (i === place ? 'border-left: 2px solid #fff; background-color: rgb(255, 0, 0, 0.8)' : '')}">${letter}</span>` }).join('');
         score = Math.max(0, score - 50);
         wordElement.innerHTML = highlighted;
         new Audio('assets/wrong.mp3').play();
