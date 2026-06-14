@@ -1,4 +1,4 @@
-# 👆 Clicker Game
+# ⌨️ Typing Game
 
 A simple typing game built with javascript.
 
